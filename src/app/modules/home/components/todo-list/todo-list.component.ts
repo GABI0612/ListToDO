@@ -8,9 +8,7 @@ import { TaskItem } from '../../model/task-item';
 })
 export class TodoListComponent implements DoCheck{
  
-  public taskList: Array<TaskItem> = [
-    
-  ];
+  public taskList: Array<TaskItem> = JSON.parse(localStorage.getItem("list") || "[]");
 
   public deleteItemTaskList(index: number){
     return this.taskList.splice(index, 1);
@@ -31,9 +29,18 @@ export class TodoListComponent implements DoCheck{
     this.taskList.sort(
       (first, last) => Number(first.checked) - Number(last.checked)
       );
-     
-     
-    
+      localStorage.setItem('list', JSON.stringify(this.taskList));
+  }
+
+  public validationInput(event: string, index: number) {
+
+    if (!event.length) {
+      const confirm = window.confirm("Task está sem vazia, deseja deletar?");
+
+      if (confirm) {
+        this.deleteItemTaskList(index);
+      }
+    }
 
   }
 
