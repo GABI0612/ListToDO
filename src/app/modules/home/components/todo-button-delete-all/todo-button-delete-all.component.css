@@ -1,5 +1,3 @@
-
-
 :host{
   display: flex;
   align-items: center;
@@ -8,16 +6,14 @@
   margin-top:20px;
 }
 
-button {
+button{
   border: none;
   border-radius: 50px;
-  background: red;
+  background: #FF002E;
 
   font-size: 16px;
-  color: white;
+  color: #FFFFFF;
 
   width: 60%;
   padding: 10px;
 }
-
-

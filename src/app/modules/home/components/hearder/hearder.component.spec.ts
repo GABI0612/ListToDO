@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoListComponent } from './todo-list.component';
+import { HearderComponent } from './hearder.component';
 
-describe('TodoListComponent', () => {
-  let component: TodoListComponent;
-  let fixture: ComponentFixture<TodoListComponent>;
+describe('HearderComponent', () => {
+  let component: HearderComponent;
+  let fixture: ComponentFixture<HearderComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TodoListComponent]
+      declarations: [HearderComponent]
     });
-    fixture = TestBed.createComponent(TodoListComponent);
+    fixture = TestBed.createComponent(HearderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

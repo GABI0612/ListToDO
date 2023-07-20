@@ -6,14 +6,10 @@ describe('TodoButtonDeleteAllComponent', () => {
   let component: TodoButtonDeleteAllComponent;
   let fixture: ComponentFixture<TodoButtonDeleteAllComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ TodoButtonDeleteAllComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [TodoButtonDeleteAllComponent]
+    });
     fixture = TestBed.createComponent(TodoButtonDeleteAllComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
